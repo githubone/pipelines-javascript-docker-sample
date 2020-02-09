@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: githubonepipelinesjavascriptdockersample 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: githubonepipelinesjavascriptdockersample 
+    spec:
+      containers:
+        - name: githubonepipelinesjavascriptdockersample 
+          image: mavecontreg.azurecr.io/githubonepipelinesjavascriptdockersample
+          ports:
+          - containerPort: 8080
